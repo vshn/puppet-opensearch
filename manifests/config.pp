@@ -92,7 +92,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $settings.stdlib::to_yaml,
+      content => to_yaml($settings),
     }
 
     file { "${config_directory}/jvm.options":
@@ -108,7 +108,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $notifications_notifications.stdlib::to_yaml,
+      content => to_yaml($notifications_notifications),
     }
 
     file { "${config_directory}/opensearch-notifications-core/notifications-core.yml":
@@ -116,7 +116,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $notifications_notifications_core.stdlib::to_yaml,
+      content => to_yaml($notifications_notifications_core),
     }
 
     file { "${config_directory}/opensearch-reports-scheduler/reports-scheduler.yml":
@@ -124,7 +124,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $reporting_reports_scheduler.stdlib::to_yaml,
+      content => to_yaml($reporting_reports_scheduler),
     }
 
     file { "${config_directory}/opensearch-security/action_groups.yml":
@@ -132,7 +132,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_action_groups.stdlib::to_yaml,
+      content => to_yaml($security_action_groups),
     }
 
     file { "${config_directory}/opensearch-security/allowlist.yml":
@@ -140,7 +140,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_allowlist.stdlib::to_yaml,
+      content => to_yaml($security_allowlist),
     }
 
     file { "${config_directory}/opensearch-security/audit.yml":
@@ -148,7 +148,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_audit.stdlib::to_yaml,
+      content => to_yaml($security_audit),
     }
 
     file { "${config_directory}/opensearch-security/config.yml":
@@ -156,7 +156,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_config.stdlib::to_yaml,
+      content => to_yaml($security_config),
     }
 
     file { "${config_directory}/opensearch-security/internal_users.yml":
@@ -164,7 +164,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_internal_users.stdlib::to_yaml,
+      content => to_yaml($security_internal_users),
     }
 
     file { "${config_directory}/opensearch-security/nodes_dn.yml":
@@ -172,7 +172,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_nodes_dn.stdlib::to_yaml,
+      content => to_yaml($security_nodes_dn),
     }
 
     file { "${config_directory}/opensearch-security/roles_mapping.yml":
@@ -180,7 +180,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_roles_mapping.stdlib::to_yaml,
+      content => to_yaml($security_roles_mapping),
     }
 
     file { "${config_directory}/opensearch-security/roles.yml":
@@ -188,7 +188,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_roles.stdlib::to_yaml,
+      content => to_yaml($security_roles),
     }
 
     file { "${config_directory}/opensearch-security/tenants.yml":
@@ -196,7 +196,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_tenants.stdlib::to_yaml,
+      content => to_yaml($security_tenants),
     }
 
     file { "${config_directory}/opensearch-security/whitelist.yml":
@@ -204,7 +204,7 @@ class opensearch::config {
       owner   => 'opensearch',
       group   => 'opensearch',
       mode    => '0640',
-      content => $security_whitelist.stdlib::to_yaml,
+      content => to_yaml($security_whitelist),
     }
   }
 }
